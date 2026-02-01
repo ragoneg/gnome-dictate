@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.dictate" path="/org/gnome/shell/extensions/dictate/">
+    <!-- General Settings -->
+    <key name="toggle-key" type="as">
+      <default>['&lt;Super&gt;&lt;Alt&gt;d']</default>
+      <summary>Toggle recording keybinding</summary>
+      <description>Keyboard shortcut to start/stop recording</description>
+    </key>
+    
+    <key name="language" type="s">
+      <default>'auto'</default>
+      <summary>Language</summary>
+      <description>Language code for transcription (e.g., en, it, zh)</description>
+    </key>
+    
+    <key name="type-tool" type="s">
+      <default>'auto'</default>
+      <summary>Typing Tool</summary>
+      <description>Tool to use for typing text (auto, wtype, ydotool, xdotool, none)</description>
+    </key>
+    
+    <!-- Provider Configuration (JSON) -->
+    <key name="providers-config" type="s">
+      <default>'{"providers":[]}'</default>
+      <summary>Provider configurations</summary>
+      <description>JSON object containing all configured providers with their API keys, models, and settings</description>
+    </key>
+    
+    <!-- Selected Provider and Model -->
+    <key name="selected-provider" type="s">
+      <default>''</default>
+      <summary>Selected provider ID</summary>
+      <description>ID of the currently selected provider</description>
+    </key>
+    
+    <key name="selected-model" type="s">
+      <default>''</default>
+      <summary>Selected model ID</summary>
+      <description>ID of the currently selected model from the provider</description>
+    </key>
+    
+    <!-- Transcription Mode -->
+    <key name="transcription-mode" type="s">
+      <default>'batch'</default>
+      <summary>Transcription mode</summary>
+      <description>Transcription mode: 'batch' or 'realtime'</description>
+    </key>
+    
+    <!-- Legacy keys for backward compatibility (will be migrated) -->
+    <key name="provider" type="s">
+      <default>'openai'</default>
+      <summary>Legacy: Transcription provider</summary>
+      <description>Deprecated: Use selected-provider instead</description>
+    </key>
+    
+    <key name="api-key" type="s">
+      <default>''</default>
+      <summary>Legacy: API Key</summary>
+      <description>Deprecated: Store in providers-config instead</description>
+    </key>
+    
+    <key name="model" type="s">
+      <default>'whisper-1'</default>
+      <summary>Legacy: Model name</summary>
+      <description>Deprecated: Use selected-model instead</description>
+    </key>
+    
+    <key name="model-supports-realtime" type="b">
+      <default>false</default>
+      <summary>Legacy: Model supports realtime transcription</summary>
+      <description>Deprecated: Check model capabilities in providers-config</description>
+    </key>
+    
+    <key name="realtime" type="b">
+      <default>false</default>
+      <summary>Legacy: Real-time mode</summary>
+      <description>Deprecated: Use transcription-mode instead</description>
+    </key>
+    
+    <key name="use-proxy" type="b">
+      <default>false</default>
+      <summary>Legacy: Use proxy</summary>
+      <description>Deprecated: Configure in providers-config instead</description>
+    </key>
+    
+    <key name="proxy-url" type="s">
+      <default>''</default>
+      <summary>Legacy: Proxy URL</summary>
+      <description>Deprecated: Configure in providers-config instead</description>
+    </key>
+    
+    <key name="alibaba-use-compatible" type="b">
+      <default>false</default>
+      <summary>Legacy: Use OpenAI-compatible API</summary>
+      <description>Deprecated: Configure endpoint in providers-config instead</description>
+    </key>
+
+    <key name="alibaba-endpoint" type="s">
+      <default>''</default>
+      <summary>Legacy: Alibaba API Endpoint</summary>
+      <description>Deprecated: Use baseUrl in providers-config instead</description>
+    </key>
+    
+    <key name="alibaba-region" type="s">
+      <default>'beijing'</default>
+      <summary>Legacy: Alibaba Cloud Region</summary>
+      <description>Deprecated: Use region in providers-config instead</description>
+    </key>
+  </schema>
+</schemalist>

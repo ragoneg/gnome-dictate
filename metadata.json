@@ -1,0 +1,16 @@
+{
+  "uuid": "dictate@opencode.local",
+  "name": "Dictate",
+  "description": "Speech-to-text dictation using OpenAI, Alibaba, or other cloud providers. Supports both batch and real-time transcription. Press Super+Alt+D to start/stop recording.",
+  "version": 2,
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49"
+  ],
+  "url": "https://github.com/opencode/dictate-extension",
+  "settings-schema": "org.gnome.shell.extensions.dictate",
+  "gettext-domain": "dictate"
+}
